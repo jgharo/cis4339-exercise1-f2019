@@ -11,7 +11,12 @@
 </p>
 
 <p>
-  <%= @super_hero.super_powers %>
+  <% @super_hero.super_powers.each do |sp| %>
+  <p>
+    <%= sp.name %>
+    <%= sp.description %>
+  </p>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_super_hero_path(@super_hero) %> |
